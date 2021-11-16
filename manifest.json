@@ -8,6 +8,11 @@
 		"webRequestBlocking",
 		"https://*.agora-quiz.education/*"
 	],
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
 	"content_scripts": [
 		{
 			"matches": [
