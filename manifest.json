@@ -1,5 +1,5 @@
 {
-	"description": "zebi",
+	"description": "Show good answers of agora-quiz's quiz",
 	"manifest_version": 2,
 	"name": "Agora-bot",
 	"version": "1.0",
@@ -8,9 +8,14 @@
 		"webRequestBlocking",
 		"https://*.agora-quiz.education/*"
 	],
-	"background": {
-		"scripts": [
-			"agorabot.js"
-		]
-	}
+	"content_scripts": [
+		{
+			"matches": [
+				"https://*.agora-quiz.education/*"
+			],
+			"js": [
+				"agorabot.js"
+			]
+		}
+	]
 }
