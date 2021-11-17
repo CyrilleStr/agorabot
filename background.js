@@ -26,7 +26,11 @@ function filterData(details) {
         }).then(function sendMessageToTabs(tabs) {
             browser.tabs.sendMessage(
                 tabs[0].id,
-                { data: msg }
+                {
+                    rep1: body.question_1.good_rep,
+                    rep2: body.question_2.good_rep,
+                    rep3: body.question_3.good_rep
+                }
             ).then(response => {
                 console.log("Message from the content script:");
                 console.log(response.response);
