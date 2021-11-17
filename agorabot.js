@@ -1,5 +1,5 @@
 "use strict";
-let browser = chrome;
+// let browser = chrome;
 
 let logo = document.createElement("div")
 logo.innerHTML = "Cheatcode activated"

@@ -1,10 +1,8 @@
 # Agora-bot
 ## About
-Chrome extension showing good answers of agora-quiz's quiz
+Firefox extension showing good answers of agora-quiz's quiz
 ## Installation
 - Clone this repo: ```git clone https://github.com/CyrilleStr/agorabot```
-- Go to this page: ```chrome://extensions/```
-- Click on load unpacked
-- Select a the folder agorabot
-- Open it
+- Go to ```about:config```, change ```xpinstall.signatures.required``` to ```false```.
+- Go to ```about:addons```, and choose the ```Install Add-on from file``` option, choose the zip file.
 - It's ready
