@@ -1,6 +1,7 @@
 # Agora-bot
 ## About
 Firefox extension showing good answers of agora-quiz's quiz
+This is a temporary extension, you need to load it each time you open you browser
 ## Installation
 - Clone this repo: ```git clone https://github.com/CyrilleStr/agorabot```
 - Go to ```about:debugging#/runtime/this-firefox``` and click on ```Load Temporary Add-on...```
