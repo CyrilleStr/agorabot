@@ -1,5 +1,7 @@
 "use strict";
 
+let browser = chrome;
+
 function onError(error) {
     console.error(`Error: ${error}`);
 }

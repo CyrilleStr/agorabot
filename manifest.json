@@ -22,10 +22,5 @@
 				"agorabot.js"
 			]
 		}
-	],
-	"browser_specific_settings": {
-		"gecko": {
-			"id": "jeanmidu13@anonymus.nasa"
-		}
-	}
+	]
 }
