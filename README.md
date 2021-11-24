@@ -1,6 +1,6 @@
 # Agora-bot
 ## About
-- Firefox extension showing good answers of agora-quiz's quiz
+- Firefox extension : agoraquiz autoclicker
 - This is a temporary extension, you need to load it each time you open you browser
 ## Installation
 - Clone this repo: ```git clone https://github.com/CyrilleStr/agorabot```
@@ -8,3 +8,5 @@
 - Select ```agorabot.js```
 - Reload Agoraquiz
 - It's ready !
+## Usage
+- To disable autoclicker, open ```agorabot.js``` and set ``` autoclicker = false``` (line 10)
