@@ -13,6 +13,7 @@ let i = 0;
 let run = false;
 let k = 0;
 var responseChoice, nextRoundQuitGame, chooseTheme, launchGame;
+let found = false;
 
 // Wait for the background-script to send responeses
 browser.runtime.onMessage.addListener(request => {
@@ -39,6 +40,8 @@ function sleep(ms) {
     return new Promise(() => setTimeout(null, ms));
 }
 
+var audio = new Audio('https://media.geeksforgeeks.org/wp-content/uploads/20190531135120/beep.mp3');
+
 function playgame() {
     if (!run) {
         run = true;
@@ -59,6 +62,7 @@ function playgame() {
                 if (document.getElementsByClassName("responses-uncheck").length > 0) { // See 4 responses
                     console.log("4 réponses")
                     let elements = document.getElementsByClassName("responses-uncheck");
+                    found = false;
                     for (k = 0; k < 4; k++) {
                         console.log("check réponse");
                         console.log(i)
@@ -69,7 +73,13 @@ function playgame() {
                             sleep(Math.random() * 5000 + 3000);
                             elements[k].click(); // Click on good answer
                             i++;
+                            found = true;
+                            sleep(4000);
                         }
+                    }
+                    if (!found) {
+                        console.log("Fail");
+                        audio.play();
                     }
                 }
             },
