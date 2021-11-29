@@ -44,7 +44,7 @@ function filterData(details) {
 
 browser.webRequest.onBeforeRequest.addListener(
     function logURL(details) {
-        console.log("Request listened")
+        console.log("Request listened: ".concat(details.url).concat(" | ").concat(details.method))
         if ((details.method == "POST" && details.url.includes("new_round"))) {
             console.log("new_round")
             filterData(details)

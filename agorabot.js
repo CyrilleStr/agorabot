@@ -46,7 +46,6 @@ function playgame() {
     if (!run) {
         run = true;
         chooseTheme = setInterval(() => {
-            console.log("debug")
             if (document.getElementsByClassName("themes-step").length > 0) { // Click on theme
                 if (document.getElementsByClassName("themes-step")) {
                     document.getElementsByClassName("themes-step")[0].querySelector("button").click();
@@ -74,7 +73,7 @@ function playgame() {
                             elements[k].click(); // Click on good answer
                             i++;
                             found = true;
-                            sleep(4000);
+                            sleep(1000);
                         }
                     }
                     if (!found) {
@@ -83,7 +82,7 @@ function playgame() {
                     }
                 }
             },
-            2000);
+            6000);
         nextRoundQuitGame = setInterval(() => {
             if (document.getElementsByClassName("button-end-div").length > 0) {
                 console.log("Next round or end Game")
